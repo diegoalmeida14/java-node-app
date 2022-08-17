@@ -17,6 +17,14 @@ mvn install
 To Run app: 
 run.sh
 
+
+Swagger: http://localhost:8080/swagger-ui.html.
+
+/POST http://localhost:8080/api/produto/
+
+/POST http://localhost:8080/api/clientes
+
+/POST http://localhost:8080/api/aluguel/
 ## Node
 
 after **your Java aplication is running**, open new terminal and run: 
@@ -30,7 +38,16 @@ yarn dev
 ```
 
 
-Swagger: http://localhost:8080/swagger-ui.html.
+Main apis:
 
+/PUT http://localhost:4000/api/devolucao/{aluguel_id}
 
+/POST  http://localhost:4000/api/search
 
+/POST  http://localhost:8080/api/aluguel/
+
+/POST http://localhost:4000/api/aluguel/
+
+/POST http://localhost:4000/api/venda/
+
+![Alt text](arquitetura-node-java.jpg?raw=true "Title")
