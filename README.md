@@ -30,4 +30,7 @@ yarn dev
 ```
 
 
+Swagger: http://localhost:8080/swagger-ui.html.
+
+
 
