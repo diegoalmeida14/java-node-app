@@ -1,0 +1,55 @@
+version: '3'
+services:
+  postgresql:
+    container_name: aluga-db
+    image: postgres
+    environment:
+      POSTGRES_USER: aluga
+      POSTGRES_PASSWORD: aluga
+      POSTGRES_DB: aluga-db
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - '5432:5432'
+    networks:
+      - postgres
+    restart: unless-stopped
+  # client-test:
+  #   ports:
+  #   - "4000:4000"
+  #   expose: 
+  #   - 4000
+  #   build:
+  #     context: ../client-test
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./:/var/app/*
+  #     - /var/app/coverage
+  #     - /var/app/logs
+  #     - ./:/var/*   
+    
+  # inventory:
+  #   ports:
+  #   - "8080:8080"
+  #   expose: 
+  #   - 8080
+  #   build:
+  #     context: ../inventory
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./:/var/app/*
+  #     - /var/app/coverage
+  #     - /var/app/logs
+  #     - ./:/var/*
+      
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres:
+  cache:
+    driver: local
+     
+      
