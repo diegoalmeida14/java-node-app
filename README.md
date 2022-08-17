@@ -13,5 +13,6 @@ run.sh
 after yours application was running, open new terminal and run: 
 
 yarn install;
+
 yarn dev;
 
