@@ -1,18 +1,33 @@
 # java-node-app
 
+## Java
 
 Java Version: 17
 
 MVN Version: 3.8.6
 
-To Run app: 
+### to install:
 
+```bash
+cd inventory
+
+mvn install
+
+```
+To Run app: 
 run.sh
 
+## Node
 
-after yours application was running, open new terminal and run: 
+after **your Java aplication is running**, open new terminal and run: 
 
-yarn install;
 
-yarn dev;
+
+```bash
+cd ../cliente-test
+yarn install
+yarn dev
+```
+
+
 

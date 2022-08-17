@@ -23,6 +23,7 @@ import me.aluga.inventory.services.ProdutoService;
 public class AluguelServiceImpl implements AluguelService {
     AluguelRepository aluguelRepo;
     ClienteService clienteService;
+    final static long tempoDevolucaoInMillisseconds = 7 * 24 * 60 * 60 * 1000;
     ProdutoService produtoService;
     @Autowired
     public AluguelServiceImpl(AluguelRepository aluguelRepo,  ClienteService clienteService, ProdutoService produtoService ) {
@@ -58,7 +59,7 @@ public class AluguelServiceImpl implements AluguelService {
 
         
         aluguel.setDtIncio(new Date().getTime());
-        aluguel.setDtVencimento(new Date().getTime() + 691200000);
+        aluguel.setDtVencimento(new Date().getTime() + tempoDevolucaoInMillisseconds);
         
         return aluguelRepo.save(aluguel);
     }
